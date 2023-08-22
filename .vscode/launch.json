@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/VsCodeTest.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "device": "STM32F411E",
+            "configFiles": [
+                "openocdstuff/interface/stlink.cfg",
+                "openocdstuff/target/stm32f4x.cfg"
+            ],
+            //"runToEntryPoint": "false",
+            "showDevDebugOutput": "both"
+        }
+    ]
+}
