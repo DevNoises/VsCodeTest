@@ -187,7 +187,10 @@ clean:
 # flash
 #######################################
 flash: all
-	openocd -f openocdstuff/interface/stlink.cfg -f openocdstuff/target/stm32f4x.cfg -c "program $(BUILD_DIR)/$(TARGET).elf verify reset"
+	# openocd -f openocdstuff/target/stm32f4discovery.cfg
+	# openocd -f openocdstuff/target/stm32f4discovery.cfg -c "program $(BUILD_DIR)/$(TARGET).elf verify reset"
+	openocd -f openocdstuff/interface/stlink.cfg -f openocdstuff/target/stm32f4discovery.cfg -c "program $(BUILD_DIR)/$(TARGET).elf verify reset"
+	# openocd -f openocdstuff/interface/stlink.cfg -f openocdstuff/target/stm32f4x.cfg -c "program $(BUILD_DIR)/$(TARGET).elf verify reset"
 #######################################
 # dependencies
 #######################################

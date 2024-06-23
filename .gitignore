@@ -1,0 +1,6 @@
+# I don't want the compiled extras
+*.o
+*.d
+
+# Don't the include the build
+build
